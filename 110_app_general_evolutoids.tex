@@ -1,0 +1,79 @@
+Some of the results in this section appear in \cite{jesus2015,jesus2014}. Consider a plane  curve $\mathcal{C}(t)=[x(t),y(t)]$ defined by a support function $h$, see Equation \eqref{eqn:support}.
+ 
+The family of lines passing through $P(t)=[x(t),y(t)]$ making a constant angle $\theta$ with $(x^\prime(t),y^\prime(t)) $ is given by:
+
+% simplificacao stachel (
+\begin{align*}
+ \mathcal{L}_{\theta}(t):&  \cos(\theta-t) \,x -  \sin(\theta-t)\, y - h(t) \cos\theta + h'(t)  \sin\theta = 0
+\end{align*}
+
+%\begin{align} 
+%\mathcal{L}_{\theta}(t):& \left( \sin \left( 2\,\theta \right) +\sin \left( 2\,t \right) 
+%\right) x+ \left( \cos \left( 2\,\theta \right) -\cos \left( %2\,t \right)  \right) y\\-&h(t)  (  \sin t + 
+ %\sin \left( 2\,\theta+t \right) )+  h '(t)   (  \cos t %-\cos\left( 2\,\theta+t \right) )=0 \nonumber
+%\end{align}
+
+Let $\mathcal{C}_\theta(t)=(x_\theta,y_\theta)$ denote the envelope of $\mathcal{L}_\theta(t)$. This will be given by:
+
+\begin{align*} x_{\theta}(t)=&\frac{1}{2}  \left( \cos \left( t-2\,\theta \right) + 
+  \,\cos t  \right) h \left( t \right) -h'(t)\sin t    +\frac{1}{2} \left(\cos \left( t-2\,\theta 
+  \right) - \,\cos t  \right)  h'' \left( t \right) \\
+  %
+  y_{\theta}(t)=&\frac{1}{2} \left(\sin \left( t-2\,\theta \right)  +
+  \,\sin t \right) h(t)   +h'(t)\cos t    +\frac{1}{2} \left(\sin \left( t-2\,\theta 
+  \right) - \,\sin t  \right)  h'' (t)
+ \end{align*}
+
+\noindent Note that $\mathcal{C}_{\pi/2}$ is the {\em evolute} of $\mathcal{C}$. Let $h_{\theta}(t)=h(t-\theta)\cos\theta +h'(t-\theta)\sin\theta$. Changing variables $t=t-\theta$ it follows that the envelope is  given by
+  
+\begin{align*}
+  x_{\theta}(t-\theta)=&h_{\theta}(t)\cos t-h_{\theta}'(t)\sin t\\
+  y_{\theta}(t-\theta)=&h_{\theta}(t)\sin t+h_{\theta}'(t)\cos t
+\end{align*}
+  
+Let $S(.)$ denote the signed area of a curve. Then
+  
+  \begin{align*}
+  S(\mathcal{C})=&\frac{1}{2} \int_0^{2\pi}( h(t)^2-h'(t)^2) dt\\
+  S(\mathcal{C}_{\pi/2})=&\frac{1}{2} \int_0^{2\pi}( h'(t)^2-h''(t)^2) dt
+  \end{align*}
+  
+ \begin{proposition}
+ $S(\mathcal{C}_\theta)$ is given by
+  	
+  	\[ S(\mathcal{C}_\theta)= S(\mathcal{C})\cos^2\theta+S(\mathcal{C}_{\pi/2})\sin^2\theta\]
+%\label{prop:area}
+\end{proposition}
+
+\begin{proof}
+The signed area of the evolute $\mathcal{C}_{\pi/2}$ is negative in general, and zero if $\mathcal{C}$ is a circle. Integrating Equation~\ref{eqn:area} by parts and simplifying it yields the claim.
+\end{proof}
+
+%\begin{remark}
+%From \cite{reventos_2007} we have that:
+%	\[\int_{\mathcal{C}} \frac{ds}{k(s)}=2(A-A_e).\]
+%\end{remark}
+
+Let $L(.)$ denote the perimeter of a curve.
+
+\begin{proposition}
+For small $\theta$, $L(\mathcal{C}_{\theta}$) is given by:
+	
+	\[L(\mathcal{C}_{\theta} )=L(\mathcal{C})\cos{  \theta} \]
+\end{proposition}
+
+\begin{proof} Let $T,N$ define the tangent and normal axis of the Frenet frame. From \cite{giblin_2014} we have that
+	\[  \mathcal{C}_{\theta}(s)=\mathcal{C}(s)+\frac{\cos\theta\sin\theta}{k(s)}T(s)+\frac{ \sin^2\theta}{k(s)}N(s).\]
+	
+Differentiating the above and using Frenet equations $T'={k}N$ and $N'=-{k}T$, it follows that
+	
+\[ \mathcal{C}_{\theta}'(s)=\frac{ k(s)  ^{2}\cos{\theta} -  k'(s)\sin{\theta}}{ k(s) ^{2}}  \left( N(s) \sin{\theta}+T(s) \cos{\theta} \right) 
+	\]
+	Therefore,
+	\[ |\mathcal{C}_{\theta}'(s)|= |\cos\theta -\frac{k'(s)}{k(s)^2}\sin\theta| .\]
+	
+	For small $\theta$ it follows that
+		\[ |\mathcal{C}_{\theta}'(s)|= \cos\theta -\frac{k'(s)}{k(s)^2}\sin\theta.\]
+	Integration leads to the result stated.  
+\end{proof}
+
